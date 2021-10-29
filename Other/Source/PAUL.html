@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-US"><head><title>PurkdellApps Universal Launcher Help</title>
+	<link rel="shortcut icon" href="Other/Help/images/favicon.ico">
+	<link type="text/css" rel="stylesheet" media="all" href="Other/Help/style.css" />
+</head>
+<body>
+<div class="logo"><a href="http://purkdellapps.blogspot.com"><img src="Other/Help/images/help_logo_top.png" width="211" height="47"></a></div>
+<div class="content">
+<h1 class="hastagline"><a href="http://purkdellapps.blogspot.com/search?q=PAUL">PurkdellApps Universal Launcher</a> Help</h1>
+<h2 class="tagline">A tool for portable apps developer</h2>
+
+<p>Launcher is a small executable placed in the directory called <tt>AppNamePortable</tt> next to <tt>App</tt>, <tt>Data</tt> and <tt>Other</tt> directory which is used to launch an app executable in the <tt>App\AppName</tt> directory. Typically the launcher is named as <tt>AppNamePortable.exe</tt>. The launcher will backup local registry entries or files if any locally-installed application on the host machine on start. On exit the launcher will restore all backed up registry entries or files that previously was backed up. The settings and preferences are preserved in <tt>Data</tt> directory on exit and moved back to its original location to make it able to be read by app on start.</p>
+<p>The following is a diagram of how it works:</p>
+<pre>
+- Pre-run ----------------------------------------------------
+  + Backup any local registry or files
+  + Set any default settings
+  + Handle app language
+  + Get any passed parameters and pass to the app executable
+  + Set environment variables
+- Run --------------------------------------------------------
+  + Run app executable and wait till it has done
+  + Wait for other executable if needed
+  + Close any other executable if needed
+- Post-run ---------------------------------------------------
+  + Preserve settings and preferences into Data directory
+  + Set original local registry or files back
+  + Clean up registry or files that still remains
+</pre>
+<p>This is the most common things that the launcher will does. Some additions may need to be added depending on the app itself.</p>
+
+<h2>Acknowledgements</h2>
+<p>Based on PortableApps.com Launcher and works of John T. Haller of PortableApps.com. The packager is based on PortableApps.com Installer developed by John T. Haller of PortableApps.com. Also thanks to Bernat and Fuken Gruven that I learn much things from their codings.</p>
+
+</div>
+<div class="footer"></div>
+</body>
+</html>

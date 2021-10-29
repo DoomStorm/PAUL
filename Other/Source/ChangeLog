@@ -1,0 +1,112 @@
+	[ echo strftime("%d %B %Y %H:%M")
+	[ To search for version
+	[ /^\t\* Version\.nsh
+
+10 July 2016 15:48
+
+	* Version.nsh: 1.0.5
+
+04 July 2016 17:14
+
+	* Segments.nsh: Fixed temporary directory not removed when launcher
+	  is aborted (Goto TheEnd)
+
+04 July 2016 11:57
+
+	* Plugins\RealProgress.dll: Fixed RealProgress.dll, valid size is
+	  27.4 KB (Unicode) instead of 6.50 KB (ANSI)
+
+03 July 2016 10:48
+
+	* RemoveDirectory.nsh: Recursively removing directory is now disabled
+	  due to crash when it contains file[s] that is being used by another
+	  process
+
+03 July 2016 09:32
+
+	* Segments\Service.nsh: Fixed ServiceExists and added GetServiceStatus,
+	  CreateService, DeleteService, StartService, StopService
+
+08 June 2016 20:22
+
+	* Version.nsh: 1.0.4
+
+08 June 2016 20:10
+
+	* Plugins\inetc.dll: Added inetc.dll for use with SETUPEXTRACTOR
+
+08 June 2016 15:51
+
+	* RemoveDirectory.nsh: Fixed crash when specified directory
+	  doesn't exist
+
+08 June 2016 08:56
+
+	* PAUL.nsi, Packager.nsh: Fixed error when compiling package and
+	  user passed -lo to paul.exe
+
+07 June 2016 11:24
+
+	* ..\..\..\AppNamePortable\Other\Source\AppNamePortablePackager.nsi,
+	  Packager.nsh: Added INPUTBOXPAGE
+
+07 June 2016 08:08
+
+	* ..\..\..\AppNamePortable\Other\Source\make_launcher.bat,
+	  ..\..\..\AppNamePortable\Other\Source\make_package.bat,
+	  ..\..\..\AppNamePortable\Other\Source\make_package64.bat: Added
+	  make_launcher.bat, make_package.bat, make_package64.bat
+
+04 June 2016 15:20
+
+	* Version.nsh: 1.0.3
+
+04 June 2016 11:08
+
+	* CleanUpDirectory.nsh, Core.nsh, Packager.nsh: Added
+	  CleanUpDirectory
+
+02 June 2016 20:24
+
+	* MoveFiles.nsh: Added ${MoveFilesWithout} to move files without
+	  specified file
+
+02 June 2016 09:43
+
+	* PAUL.ico: Added 48px and 128px
+
+02 June 2016 09:02
+
+	* PAUL.nsi: Added -d switch to make PAUL shows details view when in
+	  command line mode
+
+01 June 2016 16:13
+
+	* LogicLibAdditions.nsh: Added ${If} $x options -o
+
+01 June 2016 14:23
+
+	* PAUL.nsi, paulc.nsi, PAULPackager.nsi: Added paul.exe
+
+31 May 2016 14:39
+
+	* PAUL.nsi: Added Command line mode
+
+30 May 2016 16:56
+
+	* Packager.nsh: Added EXTRACTINGSTATUS variable
+
+30 May 2016 12:36
+
+	* Packager.nsh, PAUL.nsi: Added ability to store output filename of
+	  the installer into PackageName.nsh file, so that PAUL can read it
+
+30 May 2016 10:18
+
+	* PAUL.nsi: Added Packager64
+
+29 May 2016 08:48
+
+	* Packager.nsh: From now on if FILENAME is defined, its contents
+	  will be used as output filename of the package
+
